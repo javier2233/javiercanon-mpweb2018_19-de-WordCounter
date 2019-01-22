@@ -13,7 +13,7 @@
         <textarea name="text_count" id="text_count" cols="30" rows="10"></textarea>
         </form>
         <div class="info_count_text">
-            
+            <p id="words"></p>
             </div>
             
     <script
