@@ -8,6 +8,7 @@ require 'class/Filters.php';
 
 if (isset($_POST['op']) && $_POST['op'] != '') {
 
+    $action = $_POST['op'];
     $response = array();
     $filters = new Filters();
     $text = $_POST["text"];
