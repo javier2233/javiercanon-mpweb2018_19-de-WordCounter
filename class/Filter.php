@@ -4,8 +4,8 @@
 class Filter
 {
 
-    public function counter($text){
-        return strlen($text);
+    public function counterWord($text){
+        return str_word_count($text,0, "áéíóúñ");
     }
 
 }
