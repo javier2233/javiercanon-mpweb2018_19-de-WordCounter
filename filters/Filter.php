@@ -26,6 +26,12 @@ class Filter
 
         $key_words = $this->keywordsVewel(true, true);
         $printer->printConsole($key_words);
+
+        $key_words = $this->keywordsVewel(false, false);
+        $printer->printConsole($key_words);
+
+        $key_words = $this->keywordsVewelMultiple($text);
+        $printer->printConsole($key_words);
     }
     public function getArrayWords ($text){
         $array_words = str_word_count($text,1, "áéíóúñ");
@@ -133,6 +139,27 @@ class Filter
                     $text_response = "Contar solo palabras clave que empiecen por vocal: ";
                     $counter++;
                 }
+            }elseif (!$is_two_letters){
+                $text_response = "Solo palabras clave y que no empiecen por vocal: ";
+                $counter++;
+            }
+        }
+        $response = $text_response . $counter;
+        return $response;
+    }
+
+    public function keywordsVewelMultiple($text){
+        $words = $this->getArrayWords($text);
+        $counter = 0;
+        $text_response = "Palabras que no empiecen por vocal o que sí empiecen por vocal pero tengan mas de dos carácteres: ";
+        foreach ($words as $word){
+            $is_vewel = $this->firstVocalByWord($word);
+            if($is_vewel){
+                if($this->twoMoreCharByWord($word)){
+                    $counter++;
+                }
+            }else{
+                $counter++;
             }
         }
         $response = $text_response . $counter;
