@@ -3,6 +3,7 @@ namespace filters;
 use filters\Printer as Printer;
 class Filter
 {
+    private $keywords = ["palabrejas", "gañán", "hiper-arquitecto", "que", "eh"];
     public function processWord($text){
         $printer = new Printer;
         $count = $this->counterWord($text);
@@ -13,6 +14,9 @@ class Filter
 
         $two_chars = $this->twoMoreChar($text);
         $printer->printConsole($two_chars);
+
+        $key_words = $this->getKeyWords($text);
+        $printer->printConsole($key_words);
     }
     public function getArrayWords ($text){
         $array_words = str_word_count($text,1, "áéíóúñ");
@@ -43,7 +47,6 @@ class Filter
         $words = $this->getArrayWords($text);
         $count = 0;
         foreach ($words as $word){
-
             $chars = strlen($word);
             if($chars > 2){
                 $count++;
@@ -54,7 +57,16 @@ class Filter
     }
 
     public function getKeyWords($text){
-        return str_word_count($text,0, "áéíóúñ");
+        $words = $this->getArrayWords($text);
+        $counter = 0;
+        foreach ($words as $word){
+            $is_key_word = in_array(strtolower($word), $this->keywords);
+            if($is_key_word){
+                echo $word . PHP_EOL;
+                $counter++;
+            }
+        }
+        $response = "Palabras clave: " . $counter;
+        return $response;
     }
-
 }
