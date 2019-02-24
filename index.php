@@ -17,4 +17,3 @@ echo "\n";
 //echo $accion;
 echo "\n";
 exit();
-?>
