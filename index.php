@@ -8,8 +8,11 @@ include __DIR__.'/autoload.php';
 //var_dump($argv);
 use filters\Filter;
 $filter = new Filter;
+$test = $filter
+        ->f2()
+        ->f1();
 $text  = "Esto es un texto molón que sirve como juego de pruebas para la kata de contar palabrejas. No me hagas un diseño de gañán ni de hiper-arquitecto. Que te veo, eh.";
 //$text  = $argv[1];
 //$accion = $argv[2];
-$count  = $filter->processWord($text);
+//$count  = $filter->processWord($text);
 echo "\n";

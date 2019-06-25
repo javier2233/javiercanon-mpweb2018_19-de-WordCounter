@@ -4,6 +4,14 @@ use filters\Printer as Printer;
 class Filter
 {
     private $keywords = ["palabrejas", "gañán", "hiper-arquitecto", "que", "eh"];
+    public function f1(){
+        echo "primera funcion". PHP_EOL;
+        return $this;
+    }
+    public function f2(){
+        echo "segunda funcion". PHP_EOL;
+        return $this;
+    }
     public function processWord($text){
         $printer = new Printer;
         $count = $this->counterWord($text);
