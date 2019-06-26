@@ -9,12 +9,14 @@
 namespace filters;
 class Printer
 {
-    public function printHtml($text){
-        echo "<p>$text</p>";
+    public function printHtml($result){
+        
+        echo "<p>Total palabras: $result</p>";
 
     }
 
-    public function printConsole($text){
-        echo $text . PHP_EOL;
+    public function printConsole($result){
+        echo "Total palabras: ". $result .PHP_EOL;
+        echo PHP_EOL;
     }
 }
