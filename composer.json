@@ -1,6 +1,12 @@
 {
     "name": "jcanon/javiercanon-mpweb2018_19-de-word-counter",
     "require": {
+        "php": "^7.0",
         "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "WordCounter\\": "Services/"
+        }
     }
 }

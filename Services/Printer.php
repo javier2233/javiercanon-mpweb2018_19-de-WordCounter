@@ -6,7 +6,7 @@
  * Time: 1:10 PM
  */
 
-namespace filters;
+namespace WordCounter;
 class Printer
 {
     public function printHtml($result){
