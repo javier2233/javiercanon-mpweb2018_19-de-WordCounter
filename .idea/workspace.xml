@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2da7b5c-a7f3-4bb5-871a-da1bec08bf5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/word_counter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/word_counter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Filters/Characters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Filters/Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Filters/Vowel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Characters.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Characters.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Counter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Counter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/FilterTemp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/FilterDecorator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Keyword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Keyword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Printer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Printer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Vowel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Vowel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/help.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/help.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Characters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/CollectionFilters.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CollectionFilters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Keyword.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Vowel.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +63,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter\src\Services" />
       <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter\src\Filters" />
+      <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter\src\Services" />
       <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter\src" />
       <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter" />
       <recent name="D:\sites\maestria\desarrollo_eficiente\word_counter\filters" />
@@ -91,7 +87,7 @@
       <workItem from="1583103107387" duration="814000" />
       <workItem from="1584218240134" duration="701000" />
       <workItem from="1584240509262" duration="591000" />
-      <workItem from="1584809749782" duration="9102000" />
+      <workItem from="1584809749782" duration="14642000" />
     </task>
     <servers />
   </component>
@@ -99,19 +95,19 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584825157218">
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584832188424">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.5.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1584825157218" />
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.5.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1584832188424" />
     <state x="685" y="216" key="FileChooserDialogImpl" timestamp="1584811186258">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="685" y="216" key="FileChooserDialogImpl/-1920.5.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1584811186258" />
     <state x="2468" y="178" key="FileChooserDialogImpl/1920.5.1536.840/0.0.1920.1050@1920.5.1536.840" timestamp="1584218319759" />
-    <state x="685" y="340" key="NewPhpClassDialog" timestamp="1584825083670">
+    <state x="685" y="340" key="NewPhpClassDialog" timestamp="1584828884266">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="685" y="340" key="NewPhpClassDialog/-1920.5.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1584825083670" />
+    <state x="685" y="340" key="NewPhpClassDialog/-1920.5.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1584828884266" />
     <state x="2197" y="66" key="SettingsEditor" timestamp="1581884736154">
       <screen x="1920" y="5" width="1536" height="840" />
     </state>
