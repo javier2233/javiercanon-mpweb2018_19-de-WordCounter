@@ -3,20 +3,32 @@
 include __DIR__.'/vendor/autoload.php';
 
 use WordCounter\Characters;
-use WordCounter\Counter;
-use WordCounter\Filter;
+use WordCounter\FilterTemp;
 use WordCounter\Keyword;
-use WordCounter\Printer;
+use WordCounter\Services\Printer;
 use WordCounter\Vowel;
+use WordCounter\Services\CollectionFilters;
+use WordCounter\Filters\AllWords;
+use \WordCounter\Services\TextToArray;
+use \WordCounter\Services\Counter;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $printer = new Printer();
+$counter = new Counter();
 $text  = "Esto es un texto molón que sirve como juego de pruebas para la kata de contar palabrejas. No me hagas un diseño de gañán ni de hiper-arquitecto. Que te veo, eh.";
-$filter = new Filter($text);
-//print_r($result);
+$words = new TextToArray($text);
+$arrayWords = $words->convertTextToArray();
 
+
+$allWords = new AllWords();
+$collectionFilters = new CollectionFilters();
+$collectionFilters->addFilter($allWords);
+$words = $collectionFilters->filter($arrayWords);
+$counter->countWords($words, true);
+//print_r($result);
+/*
 
 // Palabras totales
 $counter = new Counter($filter);

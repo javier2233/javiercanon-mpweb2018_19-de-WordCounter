@@ -9,17 +9,24 @@
 namespace WordCounter;
 
 
-class Characters extends FilterDecorator
+use WordCounter\Interfaces\Filter;
+
+class Characters implements Filter
 {
     private $filter;
     private $type;
     private $limit;
 
-    public function __construct(Filter $filter, $type, $limit)
+    public function __construct(FilterTemp $filter, $type, $limit)
     {
         $this->filter = $filter;
         $this->type= $type;
         $this->limit= $limit;
+    }
+
+    public function filter()
+    {
+        // TODO: Implement filter() method.
     }
 
     public function executeFilter()
@@ -57,4 +64,6 @@ class Characters extends FilterDecorator
             }
         }
     }
+
+
 }

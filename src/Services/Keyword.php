@@ -9,11 +9,11 @@
 namespace WordCounter;
 
 
-class Keyword extends FilterDecorator
+class Keyword extends FilterTempDecorator
 {
     private $keywords = ["palabrejas", "gañán", "hiper-arquitecto", "que", "eh"];
     private $filter;
-    public function __construct(Filter $filter)
+    public function __construct(FilterTemp $filter)
     {
         $this->filter = $filter;
     }

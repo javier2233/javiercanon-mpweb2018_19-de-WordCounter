@@ -2,7 +2,7 @@
 namespace WordCounter;
 
 
-class Filter
+class FilterTemp
 {    
     private $text;
     public $result = array();

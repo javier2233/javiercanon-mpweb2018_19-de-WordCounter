@@ -9,12 +9,12 @@
 namespace WordCounter;
 
 
-class Vowel extends FilterDecorator
+class Vowel extends FilterTempDecorator
 {
     private $filter;
     private $position;
     private $isVowel;
-    public function __construct(Filter $filter, String $position, $isVowel)
+    public function __construct(FilterTemp $filter, String $position, $isVowel)
     {
         $this->filter = $filter;
         $this->position = $position;
