@@ -14,7 +14,8 @@ use \WordCounter\Services\Counter;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$text = "Esto es un texto molón que sirve como juego de pruebas para la kata de contar palabrejas. No me hagas un diseño de gañán ni de hiper-arquitecto. Que te veo, eh.";
+$text = "Esto es un texto molón que sirve como juego de pruebas para la kata de contar palabrejas. No me hagas un diseño
+ de gañán ni de hiper-arquitecto. Que te veo, eh.";
 $counter = new Counter();
 $vowel = new Vowel();
 $keywords = new Keywords();
@@ -46,7 +47,7 @@ $words = $collectionFilters->filter($arrayWords);
 //Palabras clave (6)
 $collectionFilters->addFilter($keywords);
 $words = $collectionFilters->filter($arrayWords);
-$counter->countWords($words, true);
+//$counter->countWords($words, true);
 
 
 //Contar solo las palabras que empiecen por vocal y tengan más de 2 caracteres (1).
@@ -68,14 +69,22 @@ $collectionFilters->addFilter($keywords);
 $collectionFilters->addFilter($vowel);
 $collectionFilters->addFilter($characters);
 $words = $collectionFilters->filter($arrayWords);
-$counter->countWords($words, true);
+//$counter->countWords($words, true);
 
 
 //Solo palabras clave y que no empiecen por vocal (5).
 $collectionFilters->addFilter($keywords);
 $collectionFilters->addFilter($constants);
 $words = $collectionFilters->filter($arrayWords);
-$counter->countWords($words, true);
+$counter->countWords($words);
+
+//Palabras que no empiecen por vocal o que sí empiecen por vocal pero tengan más de dos caracteres (27).
+$collectionFilters->addFilter($constants);
+$collectionFilters->addOrFilter();
+$collectionFilters->addFilter($vowel);
+$collectionFilters->addFilter($characters);
+$words = $collectionFilters->filter($arrayWords);
+$counter->countWords($words);
 
 echo "\n";
 
