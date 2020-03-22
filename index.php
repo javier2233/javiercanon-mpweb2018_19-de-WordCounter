@@ -11,9 +11,6 @@ use WordCounter\Services\CollectionFilters;
 use \WordCounter\Services\TextToArray;
 use \WordCounter\Services\Counter;
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 $text = "Esto es un texto molón que sirve como juego de pruebas para la kata de contar palabrejas. No me hagas un diseño
  de gañán ni de hiper-arquitecto. Que te veo, eh.";
 $counter = new Counter();
@@ -87,4 +84,3 @@ $words = $collectionFilters->filter($arrayWords);
 $counter->countWords($words);
 
 echo "\n";
-
