@@ -1,8 +1,6 @@
 <?php
 
-
 namespace WordCounter\Services;
-
 
 class TextToArray
 {

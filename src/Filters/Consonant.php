@@ -1,8 +1,6 @@
 <?php
 
-
 namespace WordCounter\Filters;
-
 
 use WordCounter\Interfaces\Filter;
 

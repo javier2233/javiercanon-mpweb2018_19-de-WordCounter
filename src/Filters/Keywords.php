@@ -2,7 +2,6 @@
 
 namespace WordCounter\Filters;
 
-
 use WordCounter\Interfaces\Filter;
 
 class Keywords implements Filter

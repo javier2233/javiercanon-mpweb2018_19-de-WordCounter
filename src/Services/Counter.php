@@ -1,12 +1,9 @@
 <?php
 
-
 namespace WordCounter\Services;
-
 
 class Counter
 {
-
     public function countWords($arrayCounters, $debug = false){
         if($debug){
             print_r($arrayCounters);
@@ -18,6 +15,5 @@ class Counter
         }
         echo "Total: " . $total .PHP_EOL;
     }
-
 
 }
